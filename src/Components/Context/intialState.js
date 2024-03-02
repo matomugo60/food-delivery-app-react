@@ -1,6 +1,7 @@
 import { fetchUser } from "../Utils/fetchLocalStorageData";
 
-const userInfo = fetchUser();
+// Immediately invoke the function to fetch user data
+const userInfo = (async () => await fetchUser())();
 
 export const initialState = {
   user: userInfo,
